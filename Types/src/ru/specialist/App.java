@@ -10,7 +10,15 @@ class Борщ {}
  */
 class App {
 	
-	static int q;
+	static int q; // поле класса
+	
+	int u; // поле объекты
+	
+	static boolean B2()
+	{
+		System.out.println("call B2()");
+		return false;
+	}
 
 	/**
 	 * Program entry point
@@ -156,14 +164,78 @@ class App {
 		System.out.print( chCode );
 		System.out.println( ch );
 		
-		String userName = "Сергей";
-		int age = 46;
-		// Привет, Сергей - 46!
-		System.out.printf("Привет, %-20s - %x!\n", userName, age);
-		// e, f, g
-		double dd = 2.5;
-		// Переменная dd = 2.5
-		System.out.printf("Переменная dd = %6.1f\n", dd);
+		// Логический тип
+		// true false
+		boolean a2 = true;
+		boolean b2 = false;
+		
+		// Логическое И
+		boolean c2 = a2 && b2;
+		
+		// Логическое ИЛИ
+		c2 = a2 || b2;
+		
+		// Логическое НЕ
+		c2 = !a2;
+		
+		c2 = a2 | !B2();
+		
+		c2 = !(a2 && b2);
+		
+		System.out.println(c2);
+		
+		// Операторы сравнения
+		int m = 10;
+		
+		boolean b3 = (m - 5) == (m / 2);
+		// ==  != работают для любых типов, НО(!) для ссылочных сравниваются только ССЫЛКИ
+		// >  <  >=  <=  работают только для числовых типов
+		
+		b3 = (m >= 0) && (m <= 100);
+		
+		
+		System.out.println(b3);
+		
+		String s2 = null;
+		// if (s2 != null)
+		
+		// Местоположение переменной в памяти
+		/*
+		 * Стек (Stack)
+		 * Область памяти статических полей (Static data)
+		 * Куча (Heap)
+		 * 
+		 */
+		
+		// Область видимости (scope)
+		/*
+		 * Блочный оператор {}							|
+		 * Оператор цикла for							|->stack lifetime (in method)
+		 * Локальные переменные (параметры методов)		|
+		 * Поля объекта и поля класса
+		 * 		Поля объекта (без мод static) -> Heap (lifetime: new ... GC)
+		 * 		Поля класса  (с мод static) -> Static data (lifetime: class load...) 
+		 * 
+		 */
+		
+		// Время жизни (lifetime)
+		
+	
+		{
+			int my = 5;
+			System.out.println(my);	
+		}
+		{
+			String my = "abc";
+			System.out.println(my);
+		}
+		
+		for(int j=1; j <=10; j++)
+			System.out.println(j);
+		
+		//System.out.println(j);
+		
+		
 		
 		
 		/*
