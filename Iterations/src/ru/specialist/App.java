@@ -61,6 +61,11 @@ label:
 		char ch = (char)0x23;
 		
 		System.out.printf("%c", ch);
+		System.out.println();
+		
+		int[] nums = {100, 200, 300};
+		for(int k : nums) // while
+			System.out.println(k);
 		
 
 	}

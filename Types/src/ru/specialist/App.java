@@ -129,7 +129,8 @@ class App {
 		String $name1;
 		
 		// UTF-8
-		Борщ борщ = new Борщ();
+		//Борщ борщ = new Борщ();
+		var борщ = new Борщ();
 		
 		
 		// Pascal notation
