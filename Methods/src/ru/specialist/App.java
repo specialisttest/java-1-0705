@@ -43,6 +43,9 @@ public class App {
 	
 	//public static double average(int[] m) {
 	public static double average(int... m) {
+		if (m == null || m.length == 0)
+			throw new IllegalArgumentException("Array is null or empty");
+		
 		int summa = 0;
 		for(int elem : m)
 			summa += elem;
