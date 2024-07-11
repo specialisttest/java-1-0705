@@ -12,7 +12,11 @@ public class App {
 		list.remove(15);
 		
 		list.print();
-
+		
+		System.out.println( list.contains(13));
+		System.out.println( list.indexOf(1));
+		System.out.println( list.get(1));
+		
 	}
 
 }
